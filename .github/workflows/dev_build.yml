@@ -16,6 +16,8 @@ jobs:
           distribution: adopt
       - name: Build
         run: chmod +x ./gradlew
+      - name: Build
+        run: ./gradlew build
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
         with:
