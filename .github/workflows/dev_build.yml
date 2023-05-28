@@ -15,7 +15,7 @@ jobs:
           java-version: 17
           distribution: adopt
       - name: Build
-        run: chmod +x ./gradlew
+        run: ./gradlew build
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
         with:
@@ -23,5 +23,5 @@ jobs:
           automatic_release_tag: latest
           prerelease: true
           title: Dev Build
-          files: doobiedooop_addon-1.0.0.jar
+          files: |
             ./build/libs/*.jar
