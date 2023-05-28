@@ -15,7 +15,7 @@ jobs:
           java-version: 17
           distribution: adopt
       - name: Build
-        run: ./gradlew
+        run: chmod +x ./gradlew
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
         with:
